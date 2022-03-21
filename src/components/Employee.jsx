@@ -85,7 +85,7 @@ function Employee() {
         <div style={{width: '100%',display: 'flex',alignItems: 'center',flexDirection:"column" ,marginBottom:"30px"}}>
         <Newform handleAdd ={handleAdd} handleChange={handleChange} name={name } dep = {dep} gen={gen} role={role} salary={salary} setName={setName} setDep={setDep} setGen={setGen} setRole={setRole} setSalary={setSalary} />
         </div>
-        <button onClick={()=>{getData("All")}} >Show All DEPARTMENT</button>
+        <button onClick={()=>{filteredData("All")}} >Show All DEPARTMENT</button>
         <button onClick={()=>{filteredData("MARKETING")}}>Show MARKETING</button>
         <button onClick={()=>{filteredData("HR")}}>Show HR</button>
         <button onClick={()=>{filteredData("IT")}}>Show IT</button>
