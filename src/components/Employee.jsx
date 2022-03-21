@@ -5,7 +5,7 @@ import Displaydata from './Displaydata'
 function Employee() {
 
     const [name, setName] = useState("")
-    const [dep, setDep] = useState("")
+    const [dep, setDep] = useState("IT")
     const [gen, setGen] = useState("")
     const [role, setRole] = useState("")
     const [salary, setSalary] = useState(0)
