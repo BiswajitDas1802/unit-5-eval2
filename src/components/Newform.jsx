@@ -5,8 +5,8 @@ function Newform({handleAdd, handleChange, name ,dep, gen, role, salary ,setName
 
    
   return (
-    <div>
-        <form>
+    <div >
+        <form style={{width:"500px",display:"flex",flexDirection:"column"}}>
         <input type="text" value={name}  onChange={(e)=>handleChange(e,setName)}   placeholder="Name" />
         <select type="text" value={dep}   onChange={(e)=>handleChange(e,setDep)}  placeholder="Department" >
             <option value="IT">IT</option>

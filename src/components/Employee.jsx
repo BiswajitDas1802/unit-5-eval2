@@ -82,17 +82,19 @@ function Employee() {
 
   return (
     <div>
-        <Newform handleAdd ={()=>{getData("All")}} handleChange={handleChange} name={name } dep = {dep} gen={gen} role={role} salary={salary} setName={setName} setDep={setDep} setGen={setGen} setRole={setRole} setSalary={setSalary} />
-        <button onClick={()=>{getData()}} >Show All</button>
-        <button onClick={()=>{filteredData("MARKETING")}}>Show Marketing</button>
-        <button onClick={()=>{filteredData("HR")}}>Show Hr</button>
-        <button onClick={()=>{filteredData("IT")}}>Show It</button>
-        <button onClick={()=>{filteredData("FINANCE")}}>Show Finance</button>
+        <div style={{width: '100%',display: 'flex',alignItems: 'center',flexDirection:"column" ,marginBottom:"30px"}}>
+        <Newform handleAdd ={handleAdd} handleChange={handleChange} name={name } dep = {dep} gen={gen} role={role} salary={salary} setName={setName} setDep={setDep} setGen={setGen} setRole={setRole} setSalary={setSalary} />
+        </div>
+        <button onClick={()=>{getData("All")}} >Show All DEPARTMENT</button>
+        <button onClick={()=>{filteredData("MARKETING")}}>Show MARKETING</button>
+        <button onClick={()=>{filteredData("HR")}}>Show HR</button>
+        <button onClick={()=>{filteredData("IT")}}>Show IT</button>
+        <button onClick={()=>{filteredData("FINANCE")}}>Show FINANCE</button>
         <button onClick={()=>sortData()}>Sort By Salary Ascending</button>
         <button onClick={()=>sortDes()}>Sort By Salary Descending</button>
+        
 
-
-        <div style={{width: '100%',display: 'flex',alignItems: 'center',flexDirection:"column"}}>
+        <div style={{width: '100%',display: 'flex',alignItems: 'center',flexDirection:"column",marginTop:"30px"}}>
 
         {fil&&fil.map((e)=><Displaydata key={e.id} name={e.name} dep={e.dep} gen={e.gen} role={e.role} salary={e.salary}/>)}
         </div>
