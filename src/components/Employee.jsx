@@ -96,7 +96,7 @@ function Employee() {
 
         <div style={{width: '100%',display: 'flex',alignItems: 'center',flexDirection:"column",marginTop:"30px"}}>
 
-        {fil&&fil.map((e)=><Displaydata key={e.id} name={e.name} dep={e.dep} gen={e.gen} role={e.role} salary={e.salary}/>)}
+        {fil?fil.map((e)=><Displaydata key={e.id} name={e.name} dep={e.dep} gen={e.gen} role={e.role} salary={e.salary}/>):"ADD SOME EMPLOYEES"}
         </div>
     </div>
 
