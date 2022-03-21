@@ -42,6 +42,11 @@ function Employee() {
         })
         .then(()=>{
             getData()
+            setName("")
+            setDep("IT")
+            setGen("")
+            setRole("")
+            setSalary(0)
         })
         .catch((err)=>{console.log(err)});
         
@@ -59,7 +64,6 @@ function Employee() {
     }
 
     const filteredData = (filBy)=>{
-        // getData()
         let newData = data.filter((elem)=>elem.dep==filBy)
         setFil(newData)
         if(filBy=='All'){
